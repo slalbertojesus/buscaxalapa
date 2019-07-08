@@ -1,0 +1,29 @@
+        #button-añadir 
+        {
+            font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
+            background-color: white;
+            color: #FF4742;
+            border: 1px solid #FF4742; 
+            padding: 5px;
+            margin-top: 20px;
+            font-size: 20px;
+            transition-duration: 0.4s;
+        }
+        
+        #button-añadir:focus 
+        {
+            outline:0;
+        }
+
+        #button-añadir:hover 
+        { 
+            color: white;
+            background-color: #FF4742;
+        }
+
+        #centra-tabla 
+        {
+            width:70%; 
+            margin-left:15%; 
+            margin-right:15%;
+        }
