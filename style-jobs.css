@@ -1,0 +1,33 @@
+h3 {
+    font-size: 20px;
+    text-align: left;
+    margin-top: 0%;
+    margin-bottom: 0px;
+}
+
+h4 {
+    text-align: left;
+    line-height:15px;
+    margin:0px;
+}
+
+p {
+    text-align: left;
+    margin: 0px;
+}
+
+#trabajos-xalapa{
+    list-style-type: none;
+    margin:0 auto;
+    margin-left:10%; 
+    margin-right:15%;
+}
+
+.Trabajo{
+    position: static;
+    font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
+    background-color: white;
+    color: #474538;
+    height: 80px;
+    width: 1000px;
+}

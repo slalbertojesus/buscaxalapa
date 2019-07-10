@@ -29,7 +29,7 @@
             text-align: center;
         }
 
-        #button-negocio, #button-trabajos, #button-anunciate, #button-conócenos, #button-inicia-sesion
+        #button-busca-roomie, #button-trabajos, #button-anunciate, #button-conócenos, #button-inicia-sesion
         {
             font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
             color: #4E4949;
@@ -39,17 +39,17 @@
             padding: 8px;   
         }
 
-        #button-trabajos:focus, #button-anunciate:focus, #button-conócenos:focus, #button-inicia-sesion:focus 
+        #button-busca-roomie:focus, #button-trabajos:focus, #button-anunciate:focus, #button-conócenos:focus, #button-inicia-sesion:focus 
         {
             outline:0;
         }
 
-        #button-trabajos:hover, #button-anunciate:hover, #button-conócenos:hover, #button-inicia-sesion:hover 
+        #button-busca-roomie:hover, #button-trabajos:hover, #button-anunciate:hover, #button-conócenos:hover, #button-inicia-sesion:hover 
         { 
             color: #FF4742;
         }
 
-        #button-negocio
+        #button-negocio, #button-servicio
         {
             font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
             color: #4E4949;
@@ -59,12 +59,12 @@
             padding: 10px;   
         }
 
-        #button-negocio:focus
+        #button-negocio:focus, #button-servicio:focus
         {
             outline:0;
         }
 
-        #button-negocio:hover
+        #button-negocio:hover, #button-servicio:hover
         { 
             color: #B90B07;
         }
