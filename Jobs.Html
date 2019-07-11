@@ -1,8 +1,9 @@
-<!DOTYPE html>
 <!DOCTYPE HTML>
 <link rel="stylesheet" href="style-layout.css">
 <link rel="stylesheet" href="style-tabla.css">
-<link rel="stylesheet" href="style-jobs.css">
+<link rel="stylesheet" href="style-jobs.css">   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/script.js"></script>
 <h1> Busca Xalapa
     <input id = buscador-negocio type = "text" placeholder = "🔎 ¿Qué estás buscando? "></input>
     <a href="Election-Type.html"><button id = button-anunciate>Anúnciate</button></a>
@@ -13,31 +14,36 @@
 </h1>
 <body>
         <h2>Trabajos en Xalapa </h2>    
-       <ul id = "trabajos-xalapa">
-            <div class = "Trabajo">
-            <li>
-                    <h3>Nombre de empleo</h3>
-                    <h4>Nombre de empresa</h4>
-                    <h4>Número de días desde posteo</h4>
-                    <p>Descripcion breve</p>
-            </li>
-        </div> 
-            <li>
-                <div class = "Trabajo">
-                    <h3>Nombre de empleo</h3>
-                    <h4>Nombre de empresa</h4>
-                    <h4>Número de días desde posteo</h4>
-                    <p>Descripcion breve</p>
-                </div> 
-            </li>
-            <li>
-                <div class = "Trabajo">
-                    <h3>Nombre de empleo</h3>
-                    <h4>Nombre de empresa</h4>
-                    <h4>Número de días desde posteo</h4>
-                    <p>Descripcion breve</p>
-                </div> 
-            </li>
-        </ul>
+        <table id = "trabajos-xalapa">
+                <tr class="trabajo">
+                            <tc>
+                                <td>
+                                    <div class="logo-empresa">
+                                        <img src="src/img/tienda-oxxo.png" height="55" width="105">
+                                    </div>
+                                </td>
+                            </tc>
+                            <tc>
+                                <td>
+                                    <h3>Oxxo</h3>
+                                    <h4>Cajero</h4>
+                                    <h5>Morelos número ocho</h5>
+                                </td>
+                            </tc>
+                            <tc><td><h5>Trato, facilidad de palabra, Uso de computadoras</h5></td></tc>
+                            <tc>
+                                <td>
+                                    <p>6d</p>
+                                </td>
+                            </tc>
+                            <tc>
+                                    <td>
+                                        <button id = button-postulate>Postúlate</button>
+                                    </td>
+                            </tc>
+                </tr>
+        </table>
       </body>
 <html>
+    
+    

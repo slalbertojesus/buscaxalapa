@@ -1,19 +1,40 @@
 h3 {
-    font-size: 20px;
+    font-size: 17px;
+    font-weight:normal;
     text-align: left;
     margin-top: 0%;
     margin-bottom: 0px;
 }
 
 h4 {
+    font-size: 20px;
     text-align: left;
     line-height:15px;
-    margin:0px;
+    margin-top: 5px;
+    margin-bottom: 0%;
 }
 
-p {
+h5 {
+    font-size: 17px;
+    font-weight: normal;
     text-align: left;
-    margin: 0px;
+    line-height:15px;
+    margin-top: 10px;
+}
+
+table {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+td {
+    border: none;
+}
+
+p{
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
 }
 
 #trabajos-xalapa{
@@ -23,11 +44,31 @@ p {
     margin-right:15%;
 }
 
-.Trabajo{
-    position: static;
+.trabajo{
     font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
     background-color: white;
     color: #474538;
+    border: none;
     height: 80px;
     width: 1000px;
+}
+
+.trabajo:hover{
+    background-color: #F5F5F5;
+}
+
+.trabajo:hover #button-postulate{
+    display: inline-block;
+}
+
+#button-postulate{
+    font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
+    background-color: white;
+    color: #FF4742;
+    border: 1px solid #FF4742; 
+    padding: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+  display: none;
 }
