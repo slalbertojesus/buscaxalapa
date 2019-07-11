@@ -63,8 +63,8 @@ p{
 
 #button-postulate{
     font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
-    background-color: white;
-    color: #FF4742;
+    background-color: #FF4742;
+    color: white;
     border: 1px solid #FF4742; 
     padding: 5px;
     margin-top: 20px;
@@ -72,3 +72,8 @@ p{
     transition-duration: 0.4s;
   display: none;
 }
+
+#button-postulate:focus 
+        {
+            outline:0;
+        }
