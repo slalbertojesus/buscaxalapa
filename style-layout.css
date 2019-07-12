@@ -30,6 +30,7 @@
         }
 
         #button-busca-roomie, #button-trabajos, #button-anunciate, #button-conócenos, #button-inicia-sesion
+        , #button-compra-vende
         {
             font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
             color: #4E4949;
@@ -39,12 +40,14 @@
             padding: 8px;   
         }
 
-        #button-busca-roomie:focus, #button-trabajos:focus, #button-anunciate:focus, #button-conócenos:focus, #button-inicia-sesion:focus 
+        #button-busca-roomie:focus, #button-trabajos:focus, #button-anunciate:focus, #button-conócenos:focus, #button-inicia-sesion:focus
+        , #button-compra-vende:focus 
         {
             outline:0;
         }
 
         #button-busca-roomie:hover, #button-trabajos:hover, #button-anunciate:hover, #button-conócenos:hover, #button-inicia-sesion:hover 
+        , #button-compra-vende:hover
         { 
             color: #FF4742;
         }

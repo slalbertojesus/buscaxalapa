@@ -2,8 +2,9 @@ h3 {
     font-size: 17px;
     font-weight:normal;
     text-align: left;
-    margin-top: 0%;
+    margin-top: 20px;
     margin-bottom: 0px;
+    vertical-align: middle;
 }
 
 h4 {
@@ -12,6 +13,7 @@ h4 {
     line-height:15px;
     margin-top: 5px;
     margin-bottom: 0%;
+    vertical-align: middle;
 }
 
 h5 {
@@ -20,11 +22,6 @@ h5 {
     text-align: left;
     line-height:15px;
     margin-top: 10px;
-}
-
-table {
-    border: 1px solid white;
-    border-collapse: collapse;
 }
 
 td {
@@ -38,10 +35,20 @@ p{
 }
 
 #trabajos-xalapa{
+    border: 1px solid white;
+    border-collapse: collapse;
+    table-layout: fixed;
+    height: 90px;
+    width: 1200px;
     list-style-type: none;
     margin:0 auto;
-    margin-left:10%; 
+    margin-left:5%; 
     margin-right:15%;
+}
+
+#column-informacion-empresa{
+    text-align: left; 
+    vertical-align: middle;
 }
 
 .trabajo{
@@ -49,8 +56,6 @@ p{
     background-color: white;
     color: #474538;
     border: none;
-    height: 80px;
-    width: 1000px;
 }
 
 .trabajo:hover{
@@ -68,12 +73,32 @@ p{
     border: 1px solid #FF4742; 
     padding: 5px;
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 20px;
     transition-duration: 0.4s;
-  display: none;
+    display: none;
 }
 
 #button-postulate:focus 
-        {
-            outline:0;
-        }
+{
+    outline:0;
+}
+
+#button-etiqueta-trabajo{
+    font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+#button-etiqueta-trabajo:focus{
+    outline: 0;
+}
+
+#button-etiqueta-trabajo:hover{
+    background-color: black;
+    color: white;
+}
+
