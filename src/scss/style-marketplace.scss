@@ -1,0 +1,62 @@
+@import "../scss/variables-master";
+
+.container {
+    position: relative;
+    width: $half;
+}
+
+.container img {
+    width: $full;
+    height: auto;
+}
+
+.container .btn {
+    font-family: $font-stack;
+    position: absolute;
+    transform: translate(-150%, -$full);
+    -ms-transform: translate(-$half, -$half);
+    background-color: black;
+    color: white;
+    font-size: $small-font;
+    padding: 10px;
+    padding-bottom: none;
+    border: none;
+    border-radius: 5px;
+}
+
+p {
+    font-family: $font-stack;
+    color: Black;
+    font-size: $small-font;
+    font-weight: bolder;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 2%;
+}
+
+.container #button-ver-mas {
+    font-family: nunito, roboto, proxima-nova, proxima nova, sans-serif;
+    background-color: white;
+    border: $border-size-default solid $primary-color;
+    color: black;
+    height: 35px;
+    width: 175px;
+    float: left;
+}
+
+.container #button-ver-mas:focus {
+    outline: $zero;
+}
+
+.button-grupo-post button {
+    background-color: $primary-color;
+    border: $border-size-default solid $primary-color;
+    color: white;
+    padding: 10px 12px;
+    cursor: pointer;
+    float: left;
+}
+
+.button-grupo-post button:not(:last-child) {
+    border-right: none;
+}
