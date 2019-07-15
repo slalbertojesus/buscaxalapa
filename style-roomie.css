@@ -3,18 +3,15 @@
     width: 50%;
   }
   
-  /* Make the image responsive */
   .container img {
     width: 100%;
     height: auto;
+    float: center;
   }
-  
-  /* Style the button and place it in the middle of the container/image */
-  .container .button-grupo-info{
+
+  .button-grupo-info button{
     font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
-    position: absolute;
-    transform: translate(-150%, -100%);
-    -ms-transform: translate(-50%, -50%);
+    transform: translate(-20, -100%);
     background-color: black;
     color: white;
     font-size: 16px;
@@ -29,44 +26,40 @@ p{
     color: Black;
     font-size: 16px;
     font-weight: bolder;
-    text-align: left;
+    text-align: center;
     margin-top: 5px;
     margin-bottom: 2%;
 }
 
-.container #button-descripcion
-{
-    font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
-    background-color: white; 
-  border: 1px solid #FF4742; 
-  color: black; 
-  height:35px;
-    width:175px; 
-  float: left; 
-}
-
-.container #button-ver-mas:focus{
-   outline: 0; 
-}
-
-.button-grupo-info button {
-    background-color: #FF4742; 
-    border: 1px solid #FF4742; 
-    color: white; 
-    padding: 10px 12px; 
-    cursor: pointer; 
-    float: left; 
-  }
-
-  .button-grupo-post button {
+.button-grupo-pago button{
+  position: relative;
+  font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
   background-color: #FF4742; 
   border: 1px solid #FF4742; 
   color: white; 
   padding: 10px 12px; 
-  cursor: pointer; 
-  float: left; 
+  float: center; 
 }
 
-.button-grupo-post button:not(:last-child) {
-  border-right: none; 
+.button-grupo-post button {
+  position: relative;
+  font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
+  background-color: #FF4742; 
+  border: 1px solid #FF4742; 
+  color: white; 
+  padding: 10px 12px; 
+  float: center; 
 }
+
+.button-grupo-pago button:focus{
+  outline: 0;
+}
+
+.button-grupo-post button:focus{
+  outline: 0;
+}
+
+.container:hover{
+  background-color: #F5F5F5;
+}
+
