@@ -1,20 +1,20 @@
 @import "../scss/variables-master";
 
 h3 {
-    font-size: 17px;
+    font-size: $small-font;
     font-weight:normal;
     text-align: left;
-    margin-top: 20px;
-    margin-bottom: 0px;
+    margin-top: $h3-margin-top;
+    margin-bottom: $zeropx;
     vertical-align: middle;
 }
 
 h4 {
     font-size: $medium-font;
     text-align: left;
-    line-height:15px;
-    margin-top: 5px;
-    margin-bottom: 0%;
+    line-height:$line-header-default;
+    margin-top: $h4-margin-top;
+    margin-bottom: $zeropx;
     vertical-align: middle;
 }
 
@@ -22,8 +22,8 @@ h5 {
     font-size: $small-font;
     font-weight: normal;
     text-align: left;
-    line-height:15px;
-    margin-top: 10px;
+    line-height:$line-header-default;
+    margin-top: $h5-margin-top;
 }
 
 td {
@@ -40,12 +40,12 @@ p{
     border: $border-size-default solid white;
     border-collapse: collapse;
     table-layout: fixed;
-    height: 90px;
-    width: 1200px;
+    height: $posting-height;
+    width: $posting-width;
     list-style-type: none;
     margin:0 auto;
-    margin-left:5%; 
-    margin-right:15%;
+    margin-left:5 $margin-left; 
+    margin-right: $margin-right;
 }
 
 #column-informacion-empresa{
@@ -73,10 +73,10 @@ p{
     background-color: $primary-color;
     color: white;
     border: $border-size-default solid $primary-color; 
-    padding: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 20px;
+    padding: $padding-postulado;
+    margin-top: $postulado-margin-top;
+    margin-bottom: $postulado-margin-botton;
+    font-size: $small-font;
     transition-duration: $transition-default-timer;
     display: none;
 }

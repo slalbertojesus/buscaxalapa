@@ -18,9 +18,9 @@ footer
     background-color: white;
     color: $primary-color;
     border: $border-size-default solid $primary-color;
-    padding: 5px;
-    margin-top: 20px;
-    font-size: 20px;
+    padding: $añadir-padding;
+    margin-top: $anadir-margin-top;
+    font-size: $medium-font;
     transition-duration: $transition-default-timer;
 }
 
@@ -34,24 +34,24 @@ footer
 }
 
 #centra-tabla {
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
+    width: $tabla-choosing-width;
+    margin-left: $tabla-margin-left-right;
+    margin-right: $tabla-margin-left-right;
 }
 
 .tabla-servicio button, .tabla-empresa button
 {
     font-family: $font-stack;
-    color: #4E4949;
+    color: $choosing-font-color;
     background-color: white;
-    border: 0; 
-    border-radius: 4px;
-    padding: 10px;   
+    border: $zero; 
+    border-radius: $border-radius-default;
+    padding: $choosing-padding-default;   
 }
 
 .tabla-empresa button:focus, .tabla-servicio button:focus
 {
-    outline:0;
+    outline:$zero;
 }
 
 .tabla-empresa button:hover, .tabla-servicio button:hover

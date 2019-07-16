@@ -20,21 +20,21 @@ h2 {
 #buscador-negocio
 {
     font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
-    width: 30%;
+    width: $onethird;
     border: $border-size-default solid #D9D9D9; 
-    border-radius: 4px;
-    padding: 8px;   
+    border-radius: $border-radius-default;
+    padding: $padding-default;   
 }
 
 #button-busca-roomie, #button-trabajos, #button-anunciate, #button-conocenos, #button-inicia-sesion
 , #button-compra-vende
 {
     font-family: $font-stack;
-    color: #4E4949;
+    color: $font-color-button;
     background-color: white;
-    border: 0; 
-    border-radius: 4px;
-    padding: 8px;   
+    border: $zero; 
+    border-radius: $border-radius-default;
+    padding: $padding-default;   
 }
 
 #button-busca-roomie:focus, #button-trabajos:focus, #button-anunciate:focus, #button-conocenos:focus, #button-inicia-sesion:focus

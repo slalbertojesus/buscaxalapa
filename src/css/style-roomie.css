@@ -1,65 +1,57 @@
 .container {
-    position: relative;
-    width: 50%;
-  }
-  
-  .container img {
-    width: 100%;
-    height: auto;
-    float: center;
-  }
-
-  .button-grupo-info button{
-    font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
-    transform: translate(-20, -100%);
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-    padding-bottom: none;
-    border: none;
-    border-radius: 5px;
-  }
-
-p{
-    font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
-    color: Black;
-    font-size: 16px;
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 2%;
-}
-
-.button-grupo-pago button{
   position: relative;
-  font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
-  background-color: #FF4742; 
-  border: 1px solid #FF4742; 
-  color: white; 
-  padding: 10px 12px; 
-  float: center; 
-}
+  width: 50%; }
+
+.container img {
+  width: 100%;
+  height: auto;
+  float: center; }
+
+.button-grupo-info button {
+  font-family: nunito,roboto,proxima-nova,proxima nova,sans-serif;
+  transform: translate(-20, -100%);
+  background-color: black;
+  color: white;
+  font-size: 20 px;
+  padding: 10px;
+  padding-bottom: none;
+  border: none;
+  border-radius: 5px; }
+
+p {
+  font-family: nunito,roboto,proxima-nova,proxima nova,sans-serif;
+  color: Black;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 2%; }
+
+.button-grupo-pago button {
+  position: relative;
+  font-family: nunito,roboto,proxima-nova,proxima nova,sans-serif;
+  background-color: #FF4742;
+  border: 1px solid #FF4742;
+  color: white;
+  padding: 10px 12px;
+  float: center; }
 
 .button-grupo-post button {
   position: relative;
-  font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
-  background-color: #FF4742; 
-  border: 1px solid #FF4742; 
-  color: white; 
-  padding: 10px 12px; 
-  float: center; 
-}
+  font-family: nunito,roboto,proxima-nova,proxima nova,sans-serif;
+  background-color: #FF4742;
+  border: 1px solid #FF4742;
+  color: white;
+  padding: 10px 12px;
+  float: center; }
 
-.button-grupo-pago button:focus{
-  outline: 0;
-}
+.button-grupo-pago button:focus {
+  outline: 0; }
 
-.button-grupo-post button:focus{
-  outline: 0;
-}
+.button-grupo-post button:focus {
+  outline: 0; }
 
-.container:hover{
-  background-color: #F5F5F5;
-}
+.container:hover {
+  background-color: #F5F5F5; }
 
+/*# sourceMappingURL=style-roomie.css.map */
