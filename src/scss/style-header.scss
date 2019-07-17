@@ -19,7 +19,7 @@ h2 {
 
 #buscador-negocio
 {
-    font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
+    font-family: $font-stack;
     width: $onethird;
     border: $border-size-default solid #D9D9D9; 
     border-radius: $border-radius-default;

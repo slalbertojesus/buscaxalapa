@@ -16,12 +16,12 @@
   padding: 10px;
   padding-bottom: none;
   border: none;
-  border-radius: 5px; }
+  border-radius: 4px; }
 
 p {
   font-family: nunito,roboto,proxima-nova,proxima nova,sans-serif;
   color: Black;
-  font-size: 16px;
+  font-size: 16 px;
   font-weight: bolder;
   text-align: center;
   margin-top: 5px;
