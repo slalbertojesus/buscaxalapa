@@ -17,6 +17,16 @@ h2 {
     text-align: center;
 }
 
+#button-busca-xalapa{
+    font-family:$font-stack;
+    font-size: 30px;
+    color: $font-color-button;
+    background-color: white;
+    border: $zero; 
+    border-radius: $border-radius-default;
+    padding: $padding-default;   
+}
+
 #buscador-negocio
 {
     font-family: $font-stack;
