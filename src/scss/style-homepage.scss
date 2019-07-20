@@ -5,6 +5,7 @@
     margin: 20px auto 0;
 }
 
+
 #imagen-post {
     position: relative;
     border-radius: 4px;
@@ -33,6 +34,7 @@
 
 #servicio-domicilio{
     position: absolute;
+    font-size:14px;
     left:227px;
     top:162px;
 }
@@ -43,6 +45,15 @@
     top:162px;
 }
 
+#vegan, #alcohol, #pet, #facturar{
+    font-size:16px;
+}
+
+.rest #vegan, #alcohol, #pet, #facturar{
+    display: none;
+    position: absolute;
+}
+
 .rest button{
     font-family: $font-stack;
     background-color: $transparent-black;
@@ -50,4 +61,37 @@
     border: $border-size-default solid $transparent-black; 
     border-radius: 7px;
     transition-duration: $transition-default-timer;
+}
+
+.rest:hover #vegan{
+    display: block;
+    left:70px;
+    top:30px;
+}   
+
+.rest:hover #alcohol{
+    display: block;
+    left:70px;
+    top:60px;
+}   
+
+
+.rest:hover #pet{
+    display: block;
+    left:70px;
+    top:90px;
+}   
+
+.rest:hover #facturar{
+    display: block;
+    left:70px;
+    top:120px;
+}   
+
+.rest:hover button{
+    display: none;
+}
+
+.rest:hover img{
+    -webkit-filter:  blur(3px) grayscale(1);
 }
