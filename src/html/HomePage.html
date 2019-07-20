@@ -16,11 +16,11 @@
 <body>
     <table>
         <tr>
-            <div class=post>
+    <div class=post>
                 <tc>
                     <td>
-                        <div class=rest>
-                            <img id=imagen-post src="../img/restaurant-xalapa.jpg">
+                        <div class=rest onclick="document.getElementById('id').style.display='block'">
+                            <img id=imagen-post src="../img/restaurant-xalapa.jpg" >
                             <button id=nombre-negocio>La rubia</button>
                             <button id=precio-persona>123/mxn por persona</button>
                             <button id=menu>Menu</button>
@@ -30,11 +30,28 @@
                             <button id=alcohol>Alcohol 🍷</button>
                             <button id=pet>Pet friendly 🐕</button>
                             <button id=facturar>Se puede facturar ✉</button>
+                            <div id = "id" class="modal">
+                                <div class="modal-contenido">
+                                  <header> 
+                                    <button>Cerrar</button>
+                                    <h2>Modal Header</h2>
+                                  </header>
+                                  <div>
+                                    <p>Some text..</p>
+                                    <p>Some text..</p>
+                                  </div>
+                                  <footer>
+                                    <p>Modal Footer</p>
+                                  </footer>
+                                </div>
+                              </div>
                         </div>
                     </td>
                 </tc>
             </div>
         </tr>
     </table>
+
+
 </body>
 <html>
