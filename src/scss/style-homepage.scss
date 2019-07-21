@@ -110,7 +110,7 @@
     background-color: rgba(0, 0, 0, 0.4)
 }
 
-.modal-contenido {
+.modal-contenido { 
     margin: auto;
     background-color: #fff;
     position: relative;
@@ -119,6 +119,25 @@
     width: 600px
 }
 
-.modal button{
-    display: block;
+
+#button-cerrar{
+    font-family: $font-stack;
+    background-color: black;
+    color: white;
+    border: $border-size-default solid black; 
+    border-radius: 7px;
+    transition-duration: $transition-default-timer;
+}
+
+#button-cerrar:active .modal{
+    display: none;
+}
+
+.contenido-post p{
+    font-family: $font-stack;
+    text-align: left;
+}
+
+.tabla{
+    margin-left: 25px;
 }

@@ -97,7 +97,22 @@
   outline: 0;
   width: 600px; }
 
-.modal button {
-  display: block; }
+#button-cerrar {
+  font-family: nunito, roboto, proxima-nova, proxima nova, sans-serif;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 7px;
+  transition-duration: 0.4s; }
+
+#button-cerrar:active .modal {
+  display: none; }
+
+.contenido-post p {
+  font-family: nunito, roboto, proxima-nova, proxima nova, sans-serif;
+  text-align: left; }
+
+.tabla {
+  margin-left: 25px; }
 
 /*# sourceMappingURL=style-homepage.css.map */
