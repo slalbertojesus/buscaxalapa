@@ -1,0 +1,118 @@
+.rest {
+  position: relative;
+  margin: 20px auto 0; }
+
+#imagen-post {
+  position: relative;
+  border-radius: 4px; }
+
+#nombre-negocio {
+  position: absolute;
+  font-size: 26px;
+  left: 80px;
+  top: 80px; }
+
+#precio-persona {
+  position: absolute;
+  font-size: 16px;
+  left: 0;
+  top: 0; }
+
+#menu {
+  position: absolute;
+  font-size: 16px;
+  left: 220px;
+  top: 0; }
+
+#servicio-domicilio {
+  position: absolute;
+  font-size: 14px;
+  left: 227px;
+  top: 162px; }
+
+#estado {
+  position: absolute;
+  left: 0;
+  top: 162px; }
+
+#vegan, #alcohol, #pet, #facturar {
+  font-size: 16px; }
+
+.rest #vegan, #alcohol, #pet, #facturar {
+  display: none;
+  position: absolute; }
+
+.rest button {
+  font-family: nunito, roboto, proxima-nova, proxima nova, sans-serif;
+  background-color: rgba(10, 10, 10, 0.5);
+  color: white;
+  border: 1px solid rgba(10, 10, 10, 0.5);
+  border-radius: 7px;
+  transition-duration: 0.4s; }
+
+.rest:hover #vegan {
+  display: block;
+  left: 70px;
+  top: 30px; }
+
+.rest:hover #alcohol {
+  display: block;
+  left: 70px;
+  top: 60px; }
+
+.rest:hover #pet {
+  display: block;
+  left: 70px;
+  top: 90px; }
+
+.rest:hover #facturar {
+  display: block;
+  left: 70px;
+  top: 120px; }
+
+.rest:hover button {
+  display: none; }
+
+.rest:hover img {
+  -webkit-filter: blur(3px) grayscale(1); }
+
+.modal {
+  z-index: 3;
+  padding-top: 100px;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.modal-contenido {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  width: 600px; }
+
+#button-cerrar {
+  font-family: nunito, roboto, proxima-nova, proxima nova, sans-serif;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 7px;
+  transition-duration: 0.4s; }
+
+#button-cerrar:active .modal {
+  display: none; }
+
+.contenido-post p {
+  font-family: nunito, roboto, proxima-nova, proxima nova, sans-serif;
+  text-align: left; }
+
+.tabla {
+  margin-left: 25px; }
+
+/*# sourceMappingURL=style-homepage.css.map */
