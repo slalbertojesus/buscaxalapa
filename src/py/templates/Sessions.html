@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block header %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style-session.css') }}">
-<h1> {{ headline }}</h1>
-<body>
+{% endblock%}
+{% block body %}
     <table>
         <tr>
             <tc>
                 <td>
                     <div class=session-square>
-                            <h2>Ingresa o crea una cuenta
-                                </h2>
+                            <h2>Ingresa o crea una cuenta</h2>
                         <input id=nombre-apellidos type="text" placeholder="Nombre y apellidos "></input>
                         <input id=correo type="text" placeholder="Correo "></input>
                         <input id=contrasena type="text" placeholder="Contra"></input>
@@ -22,5 +22,4 @@
             </tc>
         </tr>
     </table>
-</body>
-<html>
+{% endblock %}
