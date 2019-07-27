@@ -1,0 +1,60 @@
+@import "../scss/variables-master";
+
+h1
+{   
+    font-family: $font-stack;
+    font-size: $medium-large-font;
+    font-style: normal;
+    color: $headers-font-color;
+    text-align: left;
+}
+
+h2 {
+    font-family: $font-stack;
+    font-size: $medium-font;
+    font-style: normal;
+    color: $headers-font-color;
+    text-align: center;
+}
+
+#button-busca-xalapa{
+    font-family:$font-stack;
+    font-size: 30px;
+    color: $font-color-button;
+    background-color: white;
+    border: $zero; 
+    border-radius: $border-radius-default;
+    padding: $padding-default;   
+}
+
+#buscador-negocio
+{
+    font-family: $font-stack;
+    width: $onethird;
+    border: $border-size-default solid #D9D9D9; 
+    border-radius: $border-radius-default;
+    padding: $padding-default;   
+}
+
+#button-busca-roomie, #button-trabajos, #button-anunciate, #button-conocenos, #button-inicia-sesion
+, #button-compra-vende
+{
+    font-family: $font-stack;
+    color: $font-color-button;
+    background-color: white;
+    border: $zero; 
+    border-radius: $border-radius-default;
+    padding: $padding-default;   
+}
+
+#button-busca-roomie:focus, #button-trabajos:focus, #button-anunciate:focus, #button-conocenos:focus, #button-inicia-sesion:focus
+, #button-compra-vende:focus 
+{
+    outline: $zero;
+}
+
+#button-busca-roomie:hover, #button-trabajos:hover, #button-anunciate:hover, #button-conocenos:hover, #button-inicia-sesion:hover 
+, #button-compra-vende:hover
+{ 
+    color: $primary-color;
+}

@@ -1,0 +1,67 @@
+@import "../scss/variables-master";
+
+.container {
+    position: relative;
+    width: $half;
+  }
+  
+  .container img {
+    width: $full;
+    height: auto;
+    float: center;
+  }
+
+  .button-grupo-info button{
+    font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
+    transform: translate(-20, -100%);
+    background-color: black;
+    color: white;
+    font-size: $medium-font;
+    padding: $padding-container-button;
+    padding-bottom: none;
+    border: none;
+    border-radius: $border-radius-default;
+  }
+
+p{
+    font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
+    color: Black;
+    font-size: $small-font;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: $p-margin-top;
+    margin-bottom: $p-margin-bottom;
+}
+
+.button-grupo-pago button{
+  position: relative;
+  font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
+  background-color: $primary-color; 
+  border: $border-size-default solid $primary-color; 
+  color: white; 
+  padding: $button-padding-default; 
+  float: center; 
+}
+
+.button-grupo-post button {
+  position: relative;
+  font-family:nunito,roboto,proxima-nova,proxima nova,sans-serif;
+  background-color: $primary-color; 
+  border: $border-size-default solid $primary-color; 
+  color: white; 
+  padding: $button-padding-default; 
+  float: center; 
+}
+
+.button-grupo-pago button:focus{
+  outline: $zero;
+}
+
+.button-grupo-post button:focus{
+  outline: $zero;
+}
+
+.container:hover{
+  background-color: $hover-component-color;
+}
+

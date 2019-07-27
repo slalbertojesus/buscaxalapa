@@ -1,0 +1,35 @@
+﻿{% extends "layout.html" %}
+{% block header %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style-table.css') }}">
+{% endblock%}
+{% block body %}
+    <body>
+<div class="tabla-servicio">
+    <h2>¿Que tipo de servicio quieres agregar? </h2>    
+    <table id = "centra-tabla">
+  <tr>
+    <td><button>Abogado 🏢</button></td>
+    <td><button>Dentista 🤒</button></td>
+    <td><button>Doctor 💊</button></td>
+    <td><button>Electricista ⚡</button></td>
+    <td><button>Fontanero 🌊</button></td>
+  </tr>
+  <tr>
+    <td><button>Organizador de eventos 🎉</button></td>
+    <td><button>Paseo de perros 🐕</button></td>
+    <td><button>Plomero 🔧</button></td>
+    <td><button>Psicologo 😡</button></td>
+    <td><button>Sastres 👚<button></td>
+  </tr>
+  <tr>
+    <td><button>Servicios de taxi 🚙</button></td>
+    <td><button>Servicio para el hogar </button></td>
+    <td><button>Tutor particular </button></td>
+    <td><button>Técnico de computadora ⌨</button></td>
+    <td><button>Valconero </button></td>
+  </tr>
+</table>
+<button id = "button-añadir">Añadir mi servicio</button>
+</div>
+  </body>
+  {% endblock %}

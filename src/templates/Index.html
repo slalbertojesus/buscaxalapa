@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block header %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style-session.css') }}">
+{% endblock%}
+{% block body %}
+<form action="{{ url_for('Ingreso')  }}" method="post">
+    <div class = formato>
+        <input type="text" name = "nombre" placeholder= "Nombre">
+        <input type="text" name = "contra" placeholder= "Contraseña">
+        <input type="text" name = "correo" placeholder= "Correo ">
+    </div>
+    <div class = formato>
+    <button>Crear</button>
+    </div>
+</form>
+{% endblock %}
