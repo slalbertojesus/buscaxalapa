@@ -7,28 +7,28 @@
 
 #imagen-post {
     position: relative;
-    border-radius: $rest-margin;
+    border-radius: $radius-image;
 }
 
 #nombre-negocio {
     position: absolute;
     font-size: $nombre-font-size;
-    left: $nombre-negocio-size;
-    top: $nombre-negocio-size;
+    left: 80px;
+    top: 80px;
 }
 
 #precio-persona{
     position: absolute;
     font-size: $precio-font-size;
-    left:$nombre-negocio-size;
-    top:$nombre-negocio-size;
+    left: $precio-size;
+    top: $precio-size;
 }
 
 #menu{
     position: absolute;
     font-size: $font-size-menu;
-    left:$left-menu-size;
-    top:$menu-size;
+    left: $left-menu-size;
+    top: $top-menu-size;
 }
 
 #servicio-domicilio{
