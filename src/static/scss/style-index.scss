@@ -1,0 +1,40 @@
+@import "../scss/variables-master";
+
+@media screen and (max-width: 400px) {
+     .container #nombre,
+     #contra,
+     #correo {
+         margin-bottom: 2%;
+        margin-left:13%;
+     }
+
+     .container .btn{
+         margin-top: 10%;
+        margin-left:34%;
+     }
+}
+
+.container #nombre,
+#contra,
+#correo {
+    font-family: $font-stack;
+    font-size: $input-font-size;
+    width: $input-width;
+    height: $input-height;
+    border: $border-size-default solid #D9D9D9;
+    border-radius: $border-radius-default;
+}
+
+.container .btn {
+    font-family: $font-stack;
+    background-color: $primary-color;
+    color: white;
+    border: $border-size-default solid $primary-color;
+    border-radius: $default-border-radius;
+    padding: $padding-postulado;
+    font-weight: bolder;
+    font-size: $button-font-size;
+    width: $button-width;
+    height: $button-height;
+    font-size: $small-font;
+}
