@@ -1,5 +1,31 @@
 @import "../scss/variables-master";
 
+@media screen and (max-width: 400px) {
+    .header #logo{
+        margin-top: none;   
+        width: 12%;
+        height: 12%;
+    }
+
+    .header #buscador-negocio {
+        position: relative; 
+        top:-14px;
+        margin-top: none;
+        margin-bottom: none;
+        margin-left: none;
+        width: 55%;
+    }
+
+    .header button {
+        display: none;
+    }
+
+    p{
+        font-size: 25px;
+        margin-left: 20%;   
+    }
+}
+
 h1
 {   
     font-family: $font-stack;
@@ -15,16 +41,6 @@ h2 {
     font-style: normal;
     color: $headers-font-color;
     text-align: center;
-}
-
-#button-busca-xalapa{
-    font-family:$font-stack;
-    font-size: 30px;
-    color: $font-color-button;
-    background-color: white;
-    border: $zero; 
-    border-radius: $border-radius-default;
-    padding: $padding-default;   
 }
 
 #buscador-negocio

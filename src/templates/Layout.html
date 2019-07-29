@@ -5,8 +5,9 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style-header.css') }}">
     {% block header %}{% endblock %}
+    <div class = header>
     <h1>
-        Busca Xalapa
+        <img id = logo src="{{ url_for('static', filename = 'img/logo.png') }}">
         <input id=buscador-negocio type="text" placeholder="🔎 ¿Qué estás buscando? "></input>
         <button id=button-conocenos>Conócenos</button>
         <a href="Roomie.html"><button id=button-busca-roomie>Busca un roomie</button></a>
@@ -14,6 +15,7 @@
         <a href="Marketplace.html"><button id=button-compra-vende>Compra y vende</button></a>
         <a href="Sessions.html"><button id=button-inicia-sesion>Ingresa</button></a>
     </h1>
+</div>    
 </head>
 
 <body>

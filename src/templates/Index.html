@@ -4,12 +4,15 @@
 {% endblock%}
 
 {% block body %}
+<h1>
+    <p>¡Crea una cuenta!</p>
+</h1>
     <form action="{{ url_for('Ingreso')  }}" method="post">
         <div class="formato">
             <input id=nombre type="text" name="nombre" placeholder="Nombre">
             <input id=contra type="password" name="contra" placeholder="Contraseña">
             <input id=correo type="text" name="correo" placeholder="Correo ">
-            <button type="submit" class="btn">Darle</button>
+            <button type="submit" class="btn">Crear </button>
         </div>
     </form>
 {% endblock %}
