@@ -6,8 +6,8 @@
 <h1>
     <p>¡Escoge lo que quieres entrar!</p>
 </h1>
-<form action="{{ url_for('Choosing')  }}" method="get">
-<button type ="submit" id = "button-empresa">Negocio</button>
-<button type ="submit" id = "button-servicio">Servicio</button>
+<form action="{{ url_for('Choosing')  }}" method="POST">
+<input type ="submit" name="button-choosing" value="business">
+<input type ="submit" name="button-choosing" value="service">
 </form>
 {% endblock %}

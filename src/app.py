@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from flask_bcrypt import Bcrypt
 from sqlalchemy import create_engine 
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -33,23 +33,22 @@ def  Ingreso():
 def Election():
     return render_template("Election-Type.html")
 
-@app.route("/Election", methods = ["get", "post"])
+@app.route("/Choosing", methods = ["POST"])
 def Choosing():
-    if request.method == 'POST':
-            if 'button-empresa' in request.form:
-                return redirect(url_for('Service'))
-            elif 'button-servicio' in request.form:
-                return redirect(url_for('Business'))
-
+        if request.form['button-choosing'] == 'business':
+            return render_template("Business.html")   
+        elif request.form['button-choosing'] == 'service':
+            return render_template("Service.html")
 
 @app.route("/Service")
 def Service():
     return render_template("Service.html")
 
-
 @app.route("/Business")
 def Business():
     return render_template("Business.html")
+    
+#hacer que funcione el movimiento entre páginas de servicios
 
 
 if __name__ == '__main__':
