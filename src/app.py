@@ -29,5 +29,28 @@ def  Ingreso():
     db.commit()
     return render_template("Correct-Process.html", message = "Registro exitoso")
 
+@app.route("/Election")
+def Election():
+    return render_template("Election-Type.html")
+
+@app.route("/Election", methods = ["get", "post"])
+def Choosing():
+    if request.method == 'POST':
+            if 'button-empresa' in request.form:
+                return redirect(url_for('Service'))
+            elif 'button-servicio' in request.form:
+                return redirect(url_for('Business'))
+
+
+@app.route("/Service")
+def Service():
+    return render_template("Service.html")
+
+
+@app.route("/Business")
+def Business():
+    return render_template("Business.html")
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 5000, threaded=True, debug=True)

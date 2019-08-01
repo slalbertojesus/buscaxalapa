@@ -26,8 +26,15 @@
     }
 }
 
+.header #logo{
+    margin-bottom:-10px;
+    width: 40px;
+    height: 40px;
+}
+
 h1
 {   
+    margin-top: none;
     font-family: $font-stack;
     font-size: $medium-large-font;
     font-style: normal;
