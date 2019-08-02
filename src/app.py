@@ -17,11 +17,8 @@ def Index():
 
 @app.route("/Ingreso", methods = ["POST"])
 def  Ingreso():
-    #Obtener correo 
     correo = request.form.get("correo")
-    #Obtener nombre 
     nombre = request.form.get("nombre")
-    #Hasher contraseña y guardarla
     contra = request.form.get("contra")
     contra_hash = bcrypt.generate_password_hash(contra)
     db.execute("insert into Usuario (correo, nombrecompleto, contrasenia) values (:correo, :nombre, :contra)", 
@@ -29,27 +26,36 @@ def  Ingreso():
     db.commit()
     return render_template("Correct-Process.html", message = "Registro exitoso")
 
-@app.route("/Election")
-def Election():
+@app.route("/Anuncio")
+def Area():
     return render_template("Election-Type.html")
 
-@app.route("/Choosing", methods = ["POST"])
-def Choosing():
-        if request.form['button-choosing'] == 'business':
-            return render_template("Business.html")   
-        elif request.form['button-choosing'] == 'service':
-            return render_template("Service.html")
+@app.route("/Escoge", methods = ["POST"])
+def Escoge():
+        rutaPrevia = "Anuncio"
+        if request.form['button-choosing'] == 'Negocio':
+            return redirect(url_for("Negocio",  rutaPrevia = rutaPrevia))   
+        elif request.form['button-choosing'] == 'Servicio':
+            return redirect(url_for("Servicio", rutaPrevia = rutaPrevia))
 
-@app.route("/Service")
-def Service():
+@app.route("/<rutaPrevia>/Negocio")
+def Negocio(rutaPrevia):
+    return render_template("/Business.html")
+    
+@app.route("/<rutaPrevia>/Servicio")
+def Servicio(rutaPrevia):
     return render_template("Service.html")
 
-@app.route("/Business")
-def Business():
-    return render_template("Business.html")
+@app.route("/Registroadd", methods = ["POST"])
+def  Registroadd():
+    correo = request.form.get("correo")
+    nombre = request.form.get("nombre")
+    contra = request.form.get("contra")
+    contra_hash = bcrypt.generate_password_hash(contra)
+    db.execute("insert into Usuario (correo, nombrecompleto, contrasenia) values (:correo, :nombre, :contra)", 
+    {"correo": correo, "nombre": nombre, "contra": contra_hash})
+    db.commit()
+    return render_template("Correct-Process.html", message = "Registro exitoso")
     
-#hacer que funcione el movimiento entre páginas de servicios
-
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 5000, threaded=True, debug=True)
