@@ -1,0 +1,17 @@
+@media screen and (max-width: 420px) {
+  p {
+    text-align: center; } }
+@media screen and (min-width: 1024px) {
+  p {
+    text-align: center; }
+
+  #area-escoger {
+    border: 1px solid black; }
+
+  .session-square {
+    font-family: nunito, roboto, proxima-nova, proxima nova, sans-serif;
+    background-color: yellow;
+    color: #474538;
+    border: none; } }
+
+/*# sourceMappingURL=style-election-type.css.map */

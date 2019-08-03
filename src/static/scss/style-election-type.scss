@@ -1,0 +1,24 @@
+@import "../scss/variables-master";
+
+@media screen and(max-width: 420px){
+    p{
+        text-align: center;      
+    }
+}
+
+@media screen and(min-width: 1024px){
+    p{
+        text-align: center;      
+    }
+
+    #area-escoger{
+        border: $border-size-default solid black;
+        }
+
+    .session-square{
+        font-family: $font-stack;
+        background-color: yellow;
+        color: #474538;
+        border: none;
+    }
+}

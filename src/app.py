@@ -15,6 +15,17 @@ db = scoped_session(sessionmaker(bind=engine))
 def Index():
     return render_template("Index.html")
 
+@app.route("/EscogeHeader", methods = ["POST"])
+def EscogeHeader():
+        if request.form['button'] == 'Conocenos':
+            return redirect(url_for("Conocenos"))   
+        elif request.form['button'] == 'Roomie':
+            return redirect(url_for("Roomie"))
+
+@app.route("/Roomie")
+def Roomie():
+    return render_template("/Roomie.html")
+
 @app.route("/Ingreso", methods = ["POST"])
 def  Ingreso():
     correo = request.form.get("correo")
@@ -33,9 +44,9 @@ def Area():
 @app.route("/Escoge", methods = ["POST"])
 def Escoge():
         rutaPrevia = "Anuncio"
-        if request.form['button-choosing'] == 'Negocio':
+        if request.form['button-choosing'] == 'Anunciar mi negocio':
             return redirect(url_for("Negocio",  rutaPrevia = rutaPrevia))   
-        elif request.form['button-choosing'] == 'Servicio':
+        elif request.form['button-choosing'] == 'Anunciar mi servicio':
             return redirect(url_for("Servicio", rutaPrevia = rutaPrevia))
 
 @app.route("/<rutaPrevia>/Negocio")

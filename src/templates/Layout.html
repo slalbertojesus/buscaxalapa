@@ -7,13 +7,15 @@
     {% block header %}{% endblock %}
     <div class = header>
     <h1>
-        <img id = logo src="{{ url_for('static', filename = 'img/logo.png') }}">
-        <input id=buscador-negocio type="text" placeholder="🔎 ¿Qué estás buscando? "></input>
-        <button id=button-conocenos>Conócenos</button>
-        <a href="Roomie.html"><button id=button-busca-roomie>Busca un roomie</button></a>
-        <a href="Jobs.Html"><button id=button-trabajos>Trabajos en Xalapa</button></a>
-        <a href="Marketplace.html"><button id=button-compra-vende>Compra y vende</button></a>
-        <a href="Sessions.html"><button id=button-inicia-sesion>Ingresa</button></a>
+            <form action="{{ url_for('EscogeHeader')  }}" method="POST">
+                <img id = logo src="{{ url_for('static', filename = 'img/logo.png') }}">
+                <input id=buscador-negocio type="text" placeholder="🔎 ¿Qué estás buscando? "></input>
+                <input type ="submit" name = "button" id="button-conocenos" value = "Conocenos">
+                <input type ="submit" name = "button" id="button-busca-roomie" value = "Roomie">
+                <input type ="submit" name = "button" id="button-trabajos" value = "Trabajos">
+                <input type ="submit" name = "button" id="button-compra-vende" value = "Compra y vende">
+                <input type ="submit" name = "button" id="button-inicia-sesion" value = "Ingresa">
+            </form>
     </h1>
 </div>    
 </head>
