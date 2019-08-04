@@ -57,16 +57,15 @@ def Negocio(rutaPrevia):
 def Servicio(rutaPrevia):
     return render_template("Service.html")
 
-@app.route("/Registroadd", methods = ["POST"])
-def  Registroadd():
-    correo = request.form.get("correo")
-    nombre = request.form.get("nombre")
-    contra = request.form.get("contra")
-    contra_hash = bcrypt.generate_password_hash(contra)
-    db.execute("insert into Usuario (correo, nombrecompleto, contrasenia) values (:correo, :nombre, :contra)", 
-    {"correo": correo, "nombre": nombre, "contra": contra_hash})
-    db.commit()
-    return render_template("Correct-Process.html", message = "Registro exitoso")
+@app.route("/RegistroNegocio", methods = ["POST"])
+def  RegistroNegocio():
+    negocioEscogido = request.form.get("id")
+    return redirect(url_for("Registro", negocioEscogido = negocioEscogido))
+
+@app.route("/Registro/<negocioEscogido>")
+def Registro(negocioEscogido):
+    return render_template("Business-Creation.html")
+
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 5000, threaded=True, debug=True)

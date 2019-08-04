@@ -5,13 +5,10 @@
   p {
     text-align: center; }
 
-  #area-escoger {
-    border: 1px solid black; }
-
   .session-square {
+    border: 1px solid black;
     font-family: nunito, roboto, proxima-nova, proxima nova, sans-serif;
     background-color: yellow;
-    color: #474538;
-    border: none; } }
+    color: #474538; } }
 
 /*# sourceMappingURL=style-election-type.css.map */

@@ -10,15 +10,11 @@
     p{
         text-align: center;      
     }
-
-    #area-escoger{
-        border: $border-size-default solid black;
-        }
-
+    
     .session-square{
+        border: $border-size-default solid black;
         font-family: $font-stack;
         background-color: yellow;
         color: #474538;
-        border: none;
     }
 }
