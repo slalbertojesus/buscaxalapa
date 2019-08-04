@@ -15,6 +15,7 @@ db = scoped_session(sessionmaker(bind=engine))
 def Index():
     return render_template("Index.html")
 
+##Redireccionamiento de header
 @app.route("/EscogeHeader", methods = ["POST"])
 def EscogeHeader():
         if request.form['button'] == 'Conocenos':
@@ -25,6 +26,8 @@ def EscogeHeader():
 @app.route("/Roomie")
 def Roomie():
     return render_template("/Roomie.html")
+##Redireccionamiento de header
+
 
 @app.route("/Ingreso", methods = ["POST"])
 def  Ingreso():
@@ -37,15 +40,16 @@ def  Ingreso():
     db.commit()
     return render_template("Correct-Process.html", message = "Registro exitoso")
 
-@app.route("/Anuncio")
+@app.route("/Registro")
 def Area():
-    return render_template("Election-Type.html")
+    return render_template("Registro.html")
 
+#Metodo en registro
 @app.route("/Escoge", methods = ["POST"])
 def Escoge():
-        rutaPrevia = "Anuncio"
+        rutaPrevia = "Registro"
         if request.form['button-choosing'] == 'Anunciar mi negocio':
-            return redirect(url_for("Negocio",  rutaPrevia = rutaPrevia))   
+            return redirect(url_for("Negocio", rutaPrevia = rutaPrevia))   
         elif request.form['button-choosing'] == 'Anunciar mi servicio':
             return redirect(url_for("Servicio", rutaPrevia = rutaPrevia))
 
@@ -55,17 +59,17 @@ def Negocio(rutaPrevia):
     
 @app.route("/<rutaPrevia>/Servicio")
 def Servicio(rutaPrevia):
-    return render_template("Service.html")
+    return render_template("/Service.html")
 
 @app.route("/RegistroNegocio", methods = ["POST"])
-def  RegistroNegocio():
-    negocioEscogido = request.form.get("id")
-    return redirect(url_for("Registro", negocioEscogido = negocioEscogido))
+def RegistroNegocio():
+    url = request.referrer
+    identificadorNegocio = request.form['negocio-escogido']
+    return redirect(url_for('CreaNegocio', identificadorNegocio = identificadorNegocio))
 
-@app.route("/Registro/<negocioEscogido>")
-def Registro(negocioEscogido):
-    return render_template("Business-Creation.html")
-
+@app.route("/<identificadorNegocio>")
+def   CreaNegocio(identificadorNegocio):
+        return render_template("/Business-Creation.html")
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 5000, threaded=True, debug=True)
