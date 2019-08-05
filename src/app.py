@@ -28,7 +28,6 @@ def Roomie():
     return render_template("/Roomie.html")
 ##Redireccionamiento de header
 
-
 @app.route("/Ingreso", methods = ["POST"])
 def  Ingreso():
     correo = request.form.get("correo")
@@ -39,19 +38,23 @@ def  Ingreso():
     {"correo": correo, "nombre": nombre, "contra": contra_hash})
     db.commit()
     return render_template("Correct-Process.html", message = "Registro exitoso")
-
-@app.route("/Registro")
-def Area():
-    return render_template("Registro.html")
-
+    
 #Metodo en registro
-@app.route("/Escoge", methods = ["POST"])
-def Escoge():
-        rutaPrevia = "Registro"
+@app.route("/Registro", methods = ["GET","POST"])
+def Registro():
+    if request.method == 'POST':
+        rutaPrevia =    request.path
         if request.form['button-choosing'] == 'Anunciar mi negocio':
             return redirect(url_for("Negocio", rutaPrevia = rutaPrevia))   
         elif request.form['button-choosing'] == 'Anunciar mi servicio':
             return redirect(url_for("Servicio", rutaPrevia = rutaPrevia))
+    if request.method == 'GET':
+        return render_template("Registro.html")
+    return redirect("Error")
+
+@app.route("/Error")
+def RoutError():
+    return redirect("Correct-Process.html")
 
 @app.route("/<rutaPrevia>/Negocio")
 def Negocio(rutaPrevia):
@@ -61,14 +64,15 @@ def Negocio(rutaPrevia):
 def Servicio(rutaPrevia):
     return render_template("/Service.html")
 
+#TODO Tiene que tener el camino hacia ese URL completo ej Registra/Negocio/Restaurante utilizar endpoints
 @app.route("/RegistroNegocio", methods = ["POST"])
 def RegistroNegocio():
-    url = request.referrer
+    url = request.endpoints
     identificadorNegocio = request.form['negocio-escogido']
-    return redirect(url_for('CreaNegocio', identificadorNegocio = identificadorNegocio))
+    return redirect(url_for('CreaNegocio', identificadorNegocio = identificadorNegocio, url = url))
 
-@app.route("/<identificadorNegocio>")
-def   CreaNegocio(identificadorNegocio):
+@app.route("/<url>/<identificadorNegocio>")
+def   CreaNegocio(identificadorNegocio, url):
         return render_template("/Business-Creation.html")
     
 if __name__ == '__main__':
