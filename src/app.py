@@ -65,14 +65,13 @@ def Servicio(rutaPrevia):
     return render_template("/Service.html")
 
 #TODO Tiene que tener el camino hacia ese URL completo ej Registra/Negocio/Restaurante utilizar endpoints
-@app.route("/RegistroNegocio", methods = ["POST"])
-def RegistroNegocio():
-    url = request.endpoints
+@app.route("/Registro/Negocio", methods = ["POST"])
+def redireccionaFormatoNegocio():
     identificadorNegocio = request.form['negocio-escogido']
-    return redirect(url_for('CreaNegocio', identificadorNegocio = identificadorNegocio, url = url))
+    return redirect(url_for('despliegaFormaNegocio', identificadorNegocio = identificadorNegocio))
 
-@app.route("/<url>/<identificadorNegocio>")
-def   CreaNegocio(identificadorNegocio, url):
+@app.route("/Registro/Negocio/<identificadorNegocio>")
+def despliegaFormaNegocio(identificadorNegocio):
         return render_template("/Business-Creation.html")
     
 if __name__ == '__main__':
