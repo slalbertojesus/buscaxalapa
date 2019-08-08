@@ -1,9 +1,41 @@
 @import "../scss/variables-master";
 
 @media screen and(max-width: 420px){
-    p{
-        text-align: center;      
+    .scroll{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar {
+            display: none;
+          }
     }
+
+    .session-square h1, p{
+        font-size:16px;
+    }
+
+    .divider {
+        margin-left: -10px;
+        height: 350px;
+        width: 400px;
+        background-color: #3C3A3C;
+    }
+
+    .session-square{
+        height: 280px;
+        width: 300px;
+        margin:10px;
+        margin-left: 22px;
+        margin-right: 22px; 
+        display: inline-block;
+        border: $border-size-default solid #3C3A3C;
+        font-family: $font-stack;
+        font-size:16px;
+        background-color:white;
+        color: #474538;
+    }
+
 }
 
 @media screen and(min-width: 1024px){

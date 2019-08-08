@@ -64,7 +64,7 @@ def Negocio(rutaPrevia):
 def Servicio(rutaPrevia):
     return render_template("/Service.html")
 
-#TODO Tiene que tener el camino hacia ese URL completo ej Registra/Negocio/Restaurante utilizar endpoints
+#TODO Separar archivos 
 @app.route("/Registro/Negocio", methods = ["POST"])
 def redireccionaFormatoNegocio():
     identificadorNegocio = request.form['negocio-escogido']

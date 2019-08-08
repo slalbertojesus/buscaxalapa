@@ -12,14 +12,17 @@
     margin-left: none;
     width: 55%; }
 
-  .header button {
+  .header #buscador-negocio {
+    display: inline-block; }
+
+  .header input {
     display: none; }
 
   p {
     font-size: 25px;
     margin-left: 20%; } }
 .header #logo {
-  margin-bottom: -10px;
+  margin-bottom: none;
   width: 40px;
   height: 40px; }
 

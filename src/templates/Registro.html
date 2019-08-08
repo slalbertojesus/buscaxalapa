@@ -9,31 +9,26 @@
         ¡Escoge lo que quieres entrar!
     </p>
 </h1>
-<table id = "area-escoger">
-        <tr>
-            <tc>
-                <td class="session-square">
-                        <form action="{{ url_for('Registro')  }}" method="POST">
-                            <h2>Negocio</h2>
-                            <p>Rentas o tienes un establecimiento</p>
-                            <p>Te pueden visitar</p>
-                            <p>Manejas empleados</p>
-                            <input type="submit" name="button-choosing" value="Anunciar mi negocio">
-                        </form>
-                </td>
-            </tc>
-            <tc>
-                <td class="session-square">
-                            <!-- buscar caracteristicas de negocios y servicios  de calidad -->
-                            <form action="{{ url_for('Registro')  }}" method="POST">
-                                <h2>Servicio</h2>
-                                <p>Ofreces atención personal</p>
-                                <p>Realizas entregas personales</p>
-                                <p>Prestas algún servicio</p>
-                                <input type="submit" name="button-choosing" value="Anunciar mi servicio">
-                            </form>
-                </td>
-            </tc>
-        </tr>
-    </table>
+<div class = "divider">
+    <div class="scroll">
+        <div class="session-square">
+            <form action="{{ url_for('Registro')  }}" method="POST">
+                <h2>Negocio</h2>
+                <p>Rentas o tienes un establecimiento</p>
+                <p>Te pueden visitar</p>
+                <p>Manejas empleados</p>
+                <input type="submit" name="button-choosing" value="Anunciar mi negocio">
+            </form>
+        </div>
+        <div class="session-square">
+            <form action="{{ url_for('Registro')  }}" method="POST">
+                <h2>Servicio</h2>
+                <p>Ofreces atención personal</p>
+                <p>Realizas entregas personales</p>
+                <p>Prestas algún servicio</p>
+                <input type="submit" name="button-choosing" value="Anunciar mi servicio">
+            </form>
+        </div>
+</div>
+</div>
 {% endblock %}
