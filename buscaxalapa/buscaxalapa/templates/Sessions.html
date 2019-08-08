@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block header %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style-session.css') }}">
+{% endblock%}
+{% block body %}
+    <table>
+        <tr>
+            <tc>
+                <td>
+                    <div class=session-square>
+                            <h2>Ingresa o crea una cuenta</h2>
+                        <input id=nombre-apellidos type="text" placeholder="Nombre y apellidos "></input>
+                        <input id=correo type="text" placeholder="Correo "></input>
+                        <input id=contrasena type="text" placeholder="Contra"></input>
+                        <div class=buttons-join>
+                            <button>Únete</button>
+                            <button>Ingresa</button>
+                        </div>
+                        <p>Al unirte a Busca Xalapa aceptas nuestros Terminos de servicio y Contrato de privacidad</p>
+                    </div>
+                </td>
+            </tc>
+        </tr>
+    </table>
+{% endblock %}

@@ -1,0 +1,87 @@
+@import "../scss/variables-master";
+
+@media screen and (max-width: 400px) {
+    .header #logo{
+        margin-top: none;   
+        width: 12%;
+        height: 12%;
+    }
+
+    .header #buscador-negocio {
+        position: relative; 
+        top:-14px;
+        margin-top: none;
+        margin-bottom: none;
+        margin-left: none;
+        width: 55%;
+    }
+
+    .header #buscador-negocio{
+        display: inline-block;
+    }
+
+    .header input {
+        display: none;
+    }
+
+    p{
+        font-size: 25px;
+        margin-left: 20%;   
+    }
+}
+
+.header #logo{
+    margin-bottom: none;
+    width: 40px;
+    height: 40px;
+}
+
+h1
+{   
+    margin-top: none;
+    font-family: $font-stack;
+    font-size: $medium-large-font;
+    font-style: normal;
+    color: $headers-font-color;
+    text-align: left;
+}
+
+h2 {
+    font-family: $font-stack;
+    font-size: $medium-font;
+    font-style: normal;
+    color: $headers-font-color;
+    text-align: center;
+}
+
+#buscador-negocio
+{
+    font-family: $font-stack;
+    width: $onethird;
+    border: $border-size-default solid #D9D9D9; 
+    border-radius: $border-radius-default;
+    padding: $padding-default;   
+}
+
+#button-busca-roomie, #button-trabajos, #button-anunciate, #button-conocenos, #button-inicia-sesion
+, #button-compra-vende
+{
+    font-family: $font-stack;
+    color: $font-color-button;
+    background-color: white;
+    border: $zero; 
+    border-radius: $border-radius-default;
+    padding: $padding-default;   
+}
+
+#button-busca-roomie:focus, #button-trabajos:focus, #button-anunciate:focus, #button-conocenos:focus, #button-inicia-sesion:focus
+, #button-compra-vende:focus 
+{
+    outline: $zero;
+}
+
+#button-busca-roomie:hover, #button-trabajos:hover, #button-anunciate:hover, #button-conocenos:hover, #button-inicia-sesion:hover 
+, #button-compra-vende:hover
+{ 
+    color: $primary-color;
+}

@@ -1,0 +1,138 @@
+// Main font stack
+$font-stack: nunito,
+roboto,
+proxima-nova,
+proxima nova,
+sans-serif;
+
+//Percentages
+$full: 100%;
+$half: 50%;
+$onethird: 30%;
+
+// Colors
+$primary-color: #FF4742;
+$hover-component-color: #F5F5F5;
+
+//Numbers
+$zero: 0;
+$zeropx: 0px;
+
+//Font-
+$small-font: 16 px;
+$medium-font: 20 px;
+$medium-large-font: 26 px;
+
+//Buttons
+$border-size-default: 1px;
+$border-radius-default: 4px;
+$font-color-button: #4E4949;
+
+//button-postulate
+$padding-postulado: 5px;
+$postulado-margin-top: 20px;
+$postulado-margin-botton: 20px;
+
+//Trabajos-Xalapa
+$margin-left: 5%;
+$margin-right: 15%;
+
+//Table
+$tabla-margin-left-right: 15%;
+
+//Headers
+$headers-font-color: #4E4949;
+$line-header-default: 15px;
+
+//Tabla-choosing
+$tabla-choosing-width: 70%;
+
+//Transition timer
+$transition-default-timer: 0.4s;
+
+//Size jobs 
+$posting-width:1200px;
+$posting-height:90px;
+
+//Margin
+$h3-margin-top: 20px;
+$h4-margin-top: 5px;
+$h5-margin-top: 10px;
+$p-margin-top: 5px;
+$p-margin-bottom: 2%;
+
+//buton-añadir
+$anadir-margin-top: 20px;
+$añadir-padding: 5px;
+
+//buton-choosing
+$choosing-padding-default: 10px;
+$choosing-font-color:#4E4949;
+
+//Padding
+$padding-default: 8px;
+$padding-container-button: 10px;
+$button-padding-default: 10px 12px;
+
+//button-ver-mas
+$ver-mas-width:175px;
+$ver-mas-height:35px;
+
+//Style-session
+
+//Headers
+$margin-left-h1: 10px;
+
+//P
+$margin-left-p: 20px;
+$font-size-p: 16px;
+
+//session-square
+$margin-left-session: 800px;
+$width-square: 20%;
+$default-border-radius: 5px;
+$default-padding-square: 5px;
+
+//session-imput
+$input-margin-session: 10px;
+$input-font-size: 22px;
+$input-margin-top:10px;
+$input-margin-botton:5px;
+$input-width:250px;
+$input-height:40px;
+
+//session-button
+$button-font-size: 20px;
+$button-width:100px;
+$button-height:40px;
+$margin-button-top:10px;
+$margin-button-bottom:15px;
+$margin-button-right:7px;
+$margin-button-left:5px;
+
+//color
+$transparent-black: rgba(10, 10, 10, .5);
+
+//homepage-style 
+$rest-margin: 20px auto 0;
+
+//image-post
+$radius-image: 4px;
+
+//nombre-negocio
+$nombre-font-size: 26px;
+$nombre-negocio-size: 80px;
+
+//precio-persona
+$precio-font-size:16px;
+$precio-size:0px;
+
+//menu 
+$font-size-menu:16px;
+$left-menu-size:220px;
+$top-menu-size:0;
+
+//servicio-domicilio
+$font-size-domicilio:14px;
+$left-domicilio-size:227px;
+$right-domicilio-size:162px;
