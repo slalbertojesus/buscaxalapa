@@ -1,18 +1,14 @@
 import os
 
 from flask import Flask
-from flask_bcrypt import Bcrypt
-from sqlalchemy import create_engine 
-from sqlalchemy.orm import scoped_session, sessionmaker
 
-app  =  Flask(__name__)
-bcrypt = Bcrypt(app)
+import buscaxalapa.views
 
-import buscaxalapa.header
-
-engine = create_engine("postgres://postgres:Barbara1621@localhost:5432/BuscaXalapa")
-db = scoped_session(sessionmaker(bind=engine))
-
-    
-if __name__ == '__main__':
+def create_app():
+    app = Flask(__name__, instance_relative_config=True)
+    from flaskr import views 
+    app.register_blueprint(views.bp)
+    app.add_url_rule("/", endpoint="index")
     app.run(host='0.0.0.0', port = 5000, threaded=True, debug=True)
+    
+    return app
