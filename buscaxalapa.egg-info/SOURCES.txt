@@ -1,5 +1,7 @@
+README.md
 setup.py
 buscaxalapa/__init__.py
+buscaxalapa/views.py
 buscaxalapa.egg-info/PKG-INFO
 buscaxalapa.egg-info/SOURCES.txt
 buscaxalapa.egg-info/dependency_links.txt
