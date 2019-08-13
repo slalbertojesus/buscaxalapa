@@ -7,7 +7,7 @@
     {% block header %}{% endblock %}
     <div class = header>
     <h1>
-            <form action="{{ url_for('EscogeHeader')  }}" method="POST">
+            <form action="{{ url_for('views.EscogeHeader')  }}" method="POST">
                 <img id = logo src="{{ url_for('static', filename = 'img/logo.png') }}">
                 <input id=buscador-negocio type="text" placeholder="🔎 ¿Qué estás buscando? "></input>
                 <input type ="submit" name = "button" id="button-conocenos" value = "Conocenos">

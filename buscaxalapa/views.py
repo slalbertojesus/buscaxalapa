@@ -1,36 +1,36 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask import Blueprint
-# from sqlalchemy import create_engine 
-# from sqlalchemy.orm import scoped_session, sessionmaker
+from sqlalchemy import create_engine 
+from sqlalchemy.orm import scoped_session, sessionmaker
 
 bp = Blueprint("views", __name__)
 
-# engine = create_engine("postgres://postgres:Barbara1621@localhost:5432/BuscaXalapa")
-# db = scoped_session(sessionmaker(bind=engine))
+engine = create_engine("postgres://postgres:Barbara1621@localhost:5432/BuscaXalapa")
+db = scoped_session(sessionmaker(bind=engine))
 
-@bp.route("/Index")
-def Index():
-    return render_template("Index.html")
+@bp.route("/")
+def index():
+    return render_template("index.html")
 
-# @app.route("/EscogeHeader", methods = ["POST"])
-# def EscogeHeader():
-#         if request.form['button'] == 'Roomie':
-#             return redirect(url_for("Roomie"))
+@bp.route("/EscogeHeader", methods = ["POST"])
+def EscogeHeader():
+         if request.form['button'] == 'Roomie':
+             return redirect(url_for("Roomie"))
 
-# @app.route("/Roomie")
-# def Roomie():
-#     return render_template("/Roomie.html")
+@bp.route("/Roomie")
+def Roomie():
+    return render_template("/Roomie.html")
 
-# @app.route("/Ingreso", methods = ["POST"])
-# def  Ingreso():
-#     correo = request.form.get("correo")
-#     nombre = request.form.get("nombre")
-#     contra = request.form.get("contra")
-#     contra_hash = bcrypt.generate_password_hash(contra)
-#     db.execute("insert into Usuario (correo, nombrecompleto, contrasenia) values (:correo, :nombre, :contra)", 
-#     {"correo": correo, "nombre": nombre, "contra": contra_hash})
-#     db.commit()
-#     return render_template("Correct-Process.html", message = "Registro exitoso")
+@bp.route("/Ingreso", methods=["POST"])
+def Ingreso():
+     correo = request.form.get("correo")
+     nombre = request.form.get("nombre")
+     contra = request.form.get("contra")
+     contra_hash = bcrypt.generate_password_hash(contra)
+     db.execute("insert into Usuario (correo, nombrecompleto, contrasenia) values (:correo, :nombre, :contra)",
+                {"correo": correo, "nombre": nombre, "contra": contra_hash})
+     db.commit()
+     return render_template("Correct-Process.html", message="Registro exitoso")
     
 # #Metodo en registro
 # @app.route("/Registro", methods = ["GET","POST"])
