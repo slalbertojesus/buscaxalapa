@@ -12,14 +12,17 @@ db = scoped_session(sessionmaker(bind=engine))
 def index():
     return render_template("index.html")
 
-@bp.route("/EscogeHeader", methods = ["POST"])
-def EscogeHeader():
-         if request.form['button'] == 'Roomie':
-             return redirect(url_for("Roomie"))
-
 @bp.route("/Roomie")
-def Roomie():
-    return render_template("/Roomie.html")
+def roomie():
+    return render_template("roomie.html")
+
+@bp.route("/Compra-vende")
+def marketplace():
+    return render_template("marketplace.html")
+
+@bp.route("/Trabajos")
+def jobs():
+    return render_template("jobs.html")
 
 @bp.route("/Ingreso", methods=["POST"])
 def Ingreso():

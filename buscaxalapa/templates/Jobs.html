@@ -1,17 +1,9 @@
-<!DOCTYPE HTML>
-<link rel="stylesheet" type="text/css" href="../css/style-header.css">
-<link rel="stylesheet" type="text/css" href="../css/style-jobs.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="/js/script.js"></script>
-<h1> Busca Xalapa
-    <input id = buscador-negocio type = "text" placeholder = "🔎 ¿Qué estás buscando? "></input>
-    <a href="Election-Type.html"><button id = button-anunciate>Anúnciate</button></a>
-    <button id = button-conocenos>Conócenos</button>
-    <a href="Roomie.html"><button id=button-busca-roomie>Busca un roomie</button></a>
-    <a href="Marketplace.html"><button id = button-compra-vende>Compra y vende</button></a>
-    <a href="Sessions.html"><button id = button-inicia-sesion>Ingresa</button></a>
-</h1>
-<body>
+{% extends "Layout.html" %}
+{% block header %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style-jobs.css') }}">
+{% endblock%}
+
+{% block body %}
         <h2>Trabajos en Xalapa </h2>    
         <table id = "trabajos-xalapa">
                 <tr class="trabajo">
@@ -46,7 +38,4 @@
                             </tc>
                 </tr>
         </table>
-      </body>
-<html>
-    
-    
+     {% endblock %}
