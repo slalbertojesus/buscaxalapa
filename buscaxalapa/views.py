@@ -24,6 +24,10 @@ def marketplace():
 def jobs():
     return render_template("jobs.html")
 
+@bp.route("/Inicio")
+def homepage():
+     return render_template("homepage.html")
+
 @bp.route("/Ingreso", methods=["POST"])
 def Ingreso():
      correo = request.form.get("correo")
