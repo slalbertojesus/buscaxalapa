@@ -63,10 +63,11 @@ h2 {
     padding: $padding-default;   
 }
 
-#button-busca-roomie, #button-trabajos, #button-anunciate, #button-conocenos, #button-inicia-sesion
-, #button-compra-vende
+a
 {
+    text-decoration: none;
     font-family: $font-stack;
+    font-size:16px;
     color: $font-color-button;
     background-color: white;
     border: $zero; 

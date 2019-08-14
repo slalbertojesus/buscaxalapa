@@ -48,9 +48,10 @@ h2 {
   border-radius: 4px;
   padding: 8px; }
 
-#button-busca-roomie, #button-trabajos, #button-anunciate, #button-conocenos, #button-inicia-sesion
-, #button-compra-vende {
+a {
+  text-decoration: none;
   font-family: nunito, roboto, proxima-nova, proxima nova, sans-serif;
+  font-size: 16px;
   color: #4E4949;
   background-color: white;
   border: 0;
