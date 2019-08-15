@@ -75,14 +75,12 @@ a
     padding: $padding-default;   
 }
 
-#button-busca-roomie:focus, #button-trabajos:focus, #button-anunciate:focus, #button-conocenos:focus, #button-inicia-sesion:focus
-, #button-compra-vende:focus 
+a:focus
 {
     outline: $zero;
 }
 
-#button-busca-roomie:hover, #button-trabajos:hover, #button-anunciate:hover, #button-conocenos:hover, #button-inicia-sesion:hover 
-, #button-compra-vende:hover
+a:hover
 { 
     color: $primary-color;
 }
