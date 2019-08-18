@@ -12,10 +12,9 @@
     <input id=buscador-negocio type="text" placeholder="🔎 ¿Qué estás buscando? "></input>
                 <a href="{{ url_for('views.roomie') }}" id = "button-busca-roomie">Roomie</a>
                 <a href="{{ url_for('views.jobs') }}" id = "button-trabajos">Trabajos</a>
+                <a href="{{ url_for('register.registro') }}" id = "button-registro">Anúnciate</a>
                 <a href="{{ url_for('views.marketplace') }}" id = "button-compra-vende">Compra y vende</a>
-                <div class=rest onclick="document.getElementById('id').style.display='block'">
-                        <a id = "button-inicia-sesión">Inicia sesión</a>
-                    </div>
+                        <a class = rest onclick="document.getElementById('id').style.display='block'">Inicia sesión</a>
                     <div id="id" class="modal-iniciar-sesion">
                         <div class="modal-contenido">
                                     <span onclick="document.getElementById('id').style.display='none'">

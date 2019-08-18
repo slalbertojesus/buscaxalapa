@@ -6,36 +6,36 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 bp = Blueprint("register", __name__)
 
 # #Metodo en registro
-# @app.route("/Registro", methods = ["GET","POST"])
-# def Registro():
-#     if request.method == 'POST':
-#         rutaPrevia =    request.path
-#         if request.form['button-choosing'] == 'Anunciar mi negocio':
-#             return redirect(url_for("Negocio", rutaPrevia = rutaPrevia))   
-#         elif request.form['button-choosing'] == 'Anunciar mi servicio':
-#             return redirect(url_for("Servicio", rutaPrevia = rutaPrevia))
-#     if request.method == 'GET':
-#         return render_template("Registro.html")
-#     return redirect("Error")
+@bp.route("/Registro", methods=["GET", "POST"])
+def registro():
+     if request.method == 'POST':
+         rutaPrevia = request.path
+         if request.form['button-choosing'] == 'Anunciar mi negocio':
+             return redirect(url_for("negocio", rutaPrevia=rutaPrevia))
+         elif request.form['button-choosing'] == 'Anunciar mi servicio':
+             return redirect(url_for("Servicio", rutaPrevia=rutaPrevia))
+     if request.method == 'GET':
+         return render_template("Registro.html")
+     return redirect("Error")
 
-# @app.route("/Error")
-# def RoutError():
-#     return redirect("Correct-Process.html")
+@bp.route("/Error")
+def RoutError():
+     return redirect("Correct-Process.html")
 
-# @app.route("/<rutaPrevia>/Negocio")
-# def Negocio(rutaPrevia):
-#     return render_template("/Business.html")
-    
-# @app.route("/<rutaPrevia>/Servicio")
-# def Servicio(rutaPrevia):
-#     return render_template("/Service.html")
+@bp.route("/<rutaPrevia>/Negocio")
+def negocio(rutaPrevia):
+     return render_template("business.html")
 
-# #TODO Separar archivos 
-# @app.route("/Registro/Negocio", methods = ["POST"])
-# def redireccionaFormatoNegocio():
-#     identificadorNegocio = request.form['negocio-escogido']
-#     return redirect(url_for('despliegaFormaNegocio', identificadorNegocio = identificadorNegocio))
+@bp.route("/<rutaPrevia>/Servicio")
+def Servicio(rutaPrevia):
+     return render_template("/Service.html")
 
-# @app.route("/Registro/Negocio/<identificadorNegocio>")
-# def despliegaFormaNegocio(identificadorNegocio):
-#         return render_template("/Business-Creation.html")
+# #TODO Separar archivos
+@bp.route("/Registro/Negocio", methods=["POST"])
+def redireccionaFormatoNegocio():
+     identificadorNegocio = request.form['negocio-escogido']
+     return redirect(url_for('despliegaFormaNegocio', identificadorNegocio=identificadorNegocio))
+
+@bp.route("/Registro/Negocio/<identificadorNegocio>")
+def despliegaFormaNegocio(identificadorNegocio):
+         return render_template("/Business-Creation.html")

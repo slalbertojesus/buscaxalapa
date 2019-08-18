@@ -1,13 +1,10 @@
 import os
 
 from flask import Flask
-import buscaxalapa.views
-import buscaxalapa.register
 
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
-    from buscaxalapa import views 
-    from buscaxalapa import register
+    from buscaxalapa import views, register
     app.register_blueprint(views.bp)
     app.register_blueprint(register.bp)
     app.add_url_rule("/", endpoint="index")
