@@ -11,9 +11,9 @@ def registro():
      if request.method == 'POST':
          rutaPrevia = request.path
          if request.form['button-choosing'] == 'Anunciar mi negocio':
-             return redirect(url_for("negocio", rutaPrevia=rutaPrevia))
+             return redirect(url_for("register.negocio", rutaPrevia=rutaPrevia))
          elif request.form['button-choosing'] == 'Anunciar mi servicio':
-             return redirect(url_for("Servicio", rutaPrevia=rutaPrevia))
+             return redirect(url_for("register.servicio", rutaPrevia=rutaPrevia))
      if request.method == 'GET':
          return render_template("Registro.html")
      return redirect("Error")
@@ -27,14 +27,14 @@ def negocio(rutaPrevia):
      return render_template("business.html")
 
 @bp.route("/<rutaPrevia>/Servicio")
-def Servicio(rutaPrevia):
-     return render_template("/Service.html")
+def servicio(rutaPrevia):
+     return render_template("service.html")
 
 # #TODO Separar archivos
 @bp.route("/Registro/Negocio", methods=["POST"])
 def redireccionaFormatoNegocio():
      identificadorNegocio = request.form['negocio-escogido']
-     return redirect(url_for('despliegaFormaNegocio', identificadorNegocio=identificadorNegocio))
+     return redirect(url_for('register.despliegaFormaNegocio', identificadorNegocio=identificadorNegocio))
 
 @bp.route("/Registro/Negocio/<identificadorNegocio>")
 def despliegaFormaNegocio(identificadorNegocio):
