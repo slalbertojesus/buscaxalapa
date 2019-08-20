@@ -10,11 +10,14 @@
         <img id = logo src="{{ url_for('static', filename = 'img/logo.png') }}">
     </a>
     <input id=buscador-negocio type="text" placeholder="🔎 ¿Qué estás buscando? "></input>
-                <a href="{{ url_for('views.roomie') }}" id = "button-busca-roomie">Roomie</a>
-                <a href="{{ url_for('views.jobs') }}" id = "button-trabajos">Trabajos</a>
-                <a href="{{ url_for('register.registro') }}" id = "button-registro">Anúnciate</a>
-                <a href="{{ url_for('views.marketplace') }}" id = "button-compra-vende">Compra y vende</a>
-                        <a class = rest onclick="document.getElementById('id').style.display='block'">Inicia sesión</a>
+                <a class = button href="{{ url_for('views.roomie') }}" id = "button-busca-roomie">Roomie</a>
+                <a class = button href="{{ url_for('views.jobs') }}" id = "button-trabajos">Trabajos</a>
+                <a class = button href="{{ url_for('register.registro') }}" id = "button-registro">Anúnciate</a>
+                <a class = button href="{{ url_for('views.marketplace') }}" id = "button-compra-vende">Compra y vende</a>
+                <a class = button onclick="document.getElementById('id').style.display='block'">Inicia sesión</a>
+                <a class = rest href="{{ url_for('views.index') }}" id = "button-registrarte">Registrate</a>
+                <!-- TODO button conócenos -->
+                <!-- TODO reemplazar views por header -->
                     <div id="id" class="modal-iniciar-sesion">
                         <div class="modal-contenido">
                                     <span onclick="document.getElementById('id').style.display='none'">
@@ -25,8 +28,6 @@
                                     <button>Iniciar sesion</button>
                         </div>
                     </div>
-                <!-- TODO añadir vista para ingresar y conócenos -->
-                <!-- TODO reemplazar views por header -->
     </h1>
 </div>    
 </head>

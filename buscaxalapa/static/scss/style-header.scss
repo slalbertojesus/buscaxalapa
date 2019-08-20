@@ -1,22 +1,22 @@
 @import "../scss/variables-master";
 
 @media screen and (max-width: 400px) {
-    .header #logo{
-        margin-top: none;   
+    .header #logo {
+        margin-top: none;
         width: 12%;
         height: 12%;
     }
 
     .header #buscador-negocio {
-        position: relative; 
-        top:-14px;
+        position: relative;
+        top: -14px;
         margin-top: none;
         margin-bottom: none;
         margin-left: none;
         width: 55%;
     }
 
-    .header #buscador-negocio{
+    .header #buscador-negocio {
         display: inline-block;
     }
 
@@ -24,20 +24,19 @@
         display: none;
     }
 
-    p{
+    p {
         font-size: 25px;
-        margin-left: 20%;   
+        margin-left: 20%;
     }
 }
 
-.header #logo{
+.header #logo {
     margin-bottom: none;
     width: 40px;
     height: 40px;
 }
 
-h1
-{   
+h1 {
     margin-top: none;
     font-family: $font-stack;
     font-size: $medium-large-font;
@@ -54,19 +53,18 @@ h2 {
     text-align: center;
 }
 
-#buscador-negocio
-{
+#buscador-negocio {
     font-family: $font-stack;
     width: $onethird;
-    border: $border-size-default solid #D9D9D9; 
+    border: $border-size-default solid #D9D9D9;
     border-radius: $border-radius-default;
-    padding: $padding-default;   
+    padding: $padding-default;
 }
 
-.modal-iniciar-sesion{
+.modal-iniciar-sesion {
     z-index: 3;
     padding-top: 100px;
-    display:none;
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -77,24 +75,36 @@ h2 {
     background-color: rgba(0, 0, 0, 0.4)
 }
 
-a
-{
+a {
     text-decoration: none;
-    font-family: $font-stack;
-    font-size:16px;
-    color: $font-color-button;
-    background-color: white;
-    border: $zero; 
-    border-radius: $border-radius-default;
-    padding: $padding-default;   
+
 }
 
-a:focus
-{
+.rest {
+    font-family: nunito, roboto, proxima-nova, proxima nova, sans-serif;
+    background-color: #FF4742;
+    color: white;
+    padding: 10px;
+    border: 1px solid #FF4742;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.button {
+    font-family: $font-stack;
+    font-size: 16px;
+    color: $font-color-button;
+    background-color: white;
+    border: $zero;
+    border-radius: $border-radius-default;
+    padding: $padding-default;
+}
+
+.button:focus {
     outline: $zero;
 }
 
-a:hover
-{ 
+.button:hover {
     color: $primary-color;
 }
