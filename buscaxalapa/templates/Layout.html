@@ -23,15 +23,16 @@
                                     <span onclick="document.getElementById('id').style.display='none'">
                                         <button id=button-cerrar>X</button>
                                     </span>
-                                    <input id=input-correo type="text" placeholder="Correo "></input>
-                                    <input id=input-contra type="text" placeholder="Contraseña "></input>
-                                    <button>Iniciar sesion</button>
+                                    <form action="{{ url_for('sessions.login')  }}" method="post">
+                                        <input id=input-correo type="text" name="nombre" placeholder="Correo">
+                                        <input id=input-correo type="text" name="contra" placeholder="Contraseñas">
+                                        <button type="submit" id= button-iniciar>Iniciar sesión</button>
+                                    </form>
                         </div>
                     </div>
     </h1>
 </div>    
 </head>
-
 <body>
     <div class="container">
         {% block body %}

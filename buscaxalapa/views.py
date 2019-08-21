@@ -1,12 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask import Blueprint
+from flask_bcrypt import Bcrypt
 from sqlalchemy import create_engine 
 from sqlalchemy.orm import scoped_session, sessionmaker
+from base import Session, engine, Base
+from Usuario import Usuario
+from buscaxalapa import app
+
+bcrypt = Bcrypt(app)
+
+Base.metadata.create_all(engine)
+
+session = Session()
 
 bp = Blueprint("views", __name__)
-
-engine = create_engine("postgres://postgres:Barbara1621@localhost:5432/BuscaXalapa")
-db = scoped_session(sessionmaker(bind=engine))
 
 @bp.route("/")
 def index():
@@ -34,7 +41,12 @@ def Ingreso():
      nombre = request.form.get("nombre")
      contra = request.form.get("contra")
      contra_hash = bcrypt.generate_password_hash(contra)
-     db.execute("insert into Usuario (correo, nombrecompleto, contrasenia) values (:correo, :nombre, :contra)",
-                {"correo": correo, "nombre": nombre, "contra": contra_hash})
-     db.commit()
+     usuario = Usuario(correo, nombre, contra_hash)
+     session.add(usuario)
+     session.commit()
+     session.close()
      return render_template("Correct-Process.html", message="Registro exitoso")
+
+#TODO mandar correo de confirmación 
+#TODO ver que es lo que va a cambiar en el header
+#TODO iniciar sesion y cerrar sesión 
