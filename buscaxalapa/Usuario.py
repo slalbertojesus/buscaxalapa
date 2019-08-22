@@ -7,7 +7,7 @@ from base import Base
 
 
 class Usuario (Base):
-        __tablename__ = "Usuario"
+        __tablename__ = 'usuario'
 
         id = Column(Integer, primary_key = True)
         correo = Column(String, nullable = False)
