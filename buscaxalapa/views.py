@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask import Blueprint
 from flask_bcrypt import Bcrypt
+from sqlalchemy.exc import IntegrityError
+from itsdangerous import URLSafeTimedSerializer
 from sqlalchemy import create_engine 
 from sqlalchemy.orm import scoped_session, sessionmaker
 from base import Session, engine, Base
@@ -12,7 +14,6 @@ bcrypt = Bcrypt(app)
 Base.metadata.create_all(engine)
 
 session = Session()
-
 bp = Blueprint("views", __name__)
 
 @bp.route("/")
@@ -37,42 +38,65 @@ def homepage():
 
 @bp.route("/Ingreso", methods=["POST"])
 def Ingreso():
-     correo = request.form.get("correo")
-     nombre = request.form.get("nombre")
-     contra = request.form.get("contra")
-     contra_hash = bcrypt.generate_password_hash(contra)
-     usuario = Usuario(correo, nombre, contra_hash)
-     session.add(usuario)
-     session.commit()
-     session.close()
+     try:
+          correo = request.form.get("correo")
+          nombre = request.form.get("nombre")
+          contra = request.form.get("contra")
+          contra_hash = bcrypt.generate_password_hash(contra)
+          usuario = Usuario(correo, nombre, contra_hash)
+          session.add(usuario)
+          session.commit()
+          mandar_confirmacion_correo(usuario.correo)
+          flash('Thanks for registering!  Please check your email to confirm your email address.', 'success')
+          return redirect(url_for('views.inicio'))
+     except IntegrityError:
+                db.session.rollback()
+                flash('ERROR! Email ({}) already exists.')
+     return render_template('register.html')
 
-      subject = "Confirm your email"
 
-        token = ts.dumps(self.email, salt='email-confirm-key')
+def mandar_correo(subject, recipients, html_body):
+    msg = Message(subject, recipients=recipients)
+    msg.html = html_body
+    thr = Thread(target=send_async_email, args=[msg])
+    thr.start()
 
-        confirm_url = url_for(
-            'confirm_email',
-            token=token,
-            _external=True)
-
-        html = render_template(
-            'email/activate.html',
-            confirm_url=confirm_url)
-
-        mandar_confirmacion_correo(usuario.correo)
-
-     return render_template("Correct-Process.html", message="Registro exitoso")
 
 def mandar_confirmacion_correo(usuario_correo):
-    confirm_serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
-    confirm_url = url_for(
-        'users.confirm_email',
-        token=confirm_serializer.dumps(user_email, salt='email-confirmation-salt'),
+     confirm_serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
+     
+     confirm_url = url_for(
+        'token.confirmal_email',
+        token= confirm_serializer.dumps(usuario_correo, salt='email-confirmation-salt'),
         _external=True)
-    html = render_template(
-        'email_confirmation.html',
-        confirm_url=confirm_url)
-    send_email('Confirm Your Email Address', [user_email], html)
+
+     html = render_template(
+          'email-confirmation.html',
+          confirm_url=confirm_url)
+          
+     mandar_correo('Confirm Your Email Address', [usuario_correo], html)
+
+@bp.route('/confirmar/<token>')
+def confirmar_email(token):
+    try:
+        confirm_serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
+        email = confirm_serializer.loads(token, salt='email-confirmation-salt', max_age=3600)
+    except:
+        flash('The confirmation link is invalid or has expired.', 'error')
+        return redirect(url_for('views.index'))
+ 
+    user = Usuario.query.filter_by(correo=correo).first()
+ 
+    if user.correo_confirmado:
+        flash('Account already confirmed. Please login.', 'info')
+    else:
+        user.correo_confirmado = True
+        user.correo_confirmado_en = datetime.now()
+        db.session.add(user)
+        db.session.commit()
+        flash('Thank you for confirming your email address!')
+ 
+    return redirect(url_for('recipes.index'))
 
 #TODO mandar correo de confirmación 
 #TODO ver que es lo que va a cambiar en el header
