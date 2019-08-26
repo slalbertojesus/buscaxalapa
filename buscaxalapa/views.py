@@ -45,7 +45,34 @@ def Ingreso():
      session.add(usuario)
      session.commit()
      session.close()
+
+      subject = "Confirm your email"
+
+        token = ts.dumps(self.email, salt='email-confirm-key')
+
+        confirm_url = url_for(
+            'confirm_email',
+            token=token,
+            _external=True)
+
+        html = render_template(
+            'email/activate.html',
+            confirm_url=confirm_url)
+
+        mandar_confirmacion_correo(usuario.correo)
+
      return render_template("Correct-Process.html", message="Registro exitoso")
+
+def mandar_confirmacion_correo(usuario_correo):
+    confirm_serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
+    confirm_url = url_for(
+        'users.confirm_email',
+        token=confirm_serializer.dumps(user_email, salt='email-confirmation-salt'),
+        _external=True)
+    html = render_template(
+        'email_confirmation.html',
+        confirm_url=confirm_url)
+    send_email('Confirm Your Email Address', [user_email], html)
 
 #TODO mandar correo de confirmación 
 #TODO ver que es lo que va a cambiar en el header
