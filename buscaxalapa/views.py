@@ -3,13 +3,18 @@ from flask import Blueprint
 from flask_bcrypt import Bcrypt
 from sqlalchemy.exc import IntegrityError
 from itsdangerous import URLSafeTimedSerializer
+from flask_mail import Message
+from threading import Thread
 from sqlalchemy import create_engine 
 from sqlalchemy.orm import scoped_session, sessionmaker
 from base import Session, engine, Base
 from Usuario import Usuario
+from flask_mail import Mail
+from datetime import datetime
 from buscaxalapa import app
 
 bcrypt = Bcrypt(app)
+mail = Mail(app)
 
 Base.metadata.create_all(engine)
 
@@ -54,6 +59,10 @@ def Ingreso():
                 flash('ERROR! Email ({}) already exists.')
      return render_template('register.html')
 
+def send_async_email(msg):
+    with app.app_context():
+        mail.send(msg)
+
 
 def mandar_correo(subject, recipients, html_body):
     msg = Message(subject, recipients=recipients)
@@ -80,7 +89,7 @@ def mandar_confirmacion_correo(usuario_correo):
 def confirmar_email(token):
     try:
         confirm_serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
-        email = confirm_serializer.loads(token, salt='email-confirmation-salt', max_age=3600)
+        correo = confirm_serializer.loads(token, salt='email-confirmation-salt', max_age=3600)
     except:
         flash('The confirmation link is invalid or has expired.', 'error')
         return redirect(url_for('views.index'))
