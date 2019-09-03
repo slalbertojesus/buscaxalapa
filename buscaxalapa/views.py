@@ -106,7 +106,3 @@ def confirmar_email(token):
         flash('Thank you for confirming your email address!')
  
     return redirect(url_for('recipes.index'))
-
-#TODO mandar correo de confirmación 
-#TODO ver que es lo que va a cambiar en el header
-#TODO iniciar sesion y cerrar sesión 
